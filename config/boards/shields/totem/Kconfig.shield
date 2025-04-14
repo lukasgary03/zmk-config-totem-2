@@ -6,3 +6,10 @@ config SHIELD_TOTEM_LEFT
 
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
+
+if SHIELD_TOTEM_DONGLE
+
+config ZMK_KEYBOARD_NAME
+    default "Totem"
+
+endif
