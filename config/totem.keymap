@@ -23,11 +23,11 @@
 #define TVP2 5
 
 &mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
+    quick-tap-ms = <150>;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-    require-prior-idle-ms = <100>;
+    tapping-term-ms = <225>;
+    retro-tap;
+    hold-trigger-on-release;
 };
 
 / {
@@ -47,6 +47,21 @@
                 <&macro_release>;
 
             label = "SCREENSHOT";
+        };
+
+        IOS_screenShot: IOS_screenShot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp KP_NUMBER_4>,
+                <&macro_release>;
+
+            label = "IOS_SCREENSHOT";
         };
     };
 
@@ -72,10 +87,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                 &kp Q  &kp W               &kp F            &kp P           &kp B                   &kp J                 &kp L        &kp U        &kp Y    &kp SEMI
-                 &kp A  &mt LEFT_CONTROL R  &mt RIGHT_ALT S  &mt LEFT_GUI T  &kp G                   &kp M                 &kp N        &kp E        &kp I    &kp O
-&mt LC(V) LC(C)  &kp Z  &kp X               &kp C            &kp D           &kp V                   &kp K                 &kp H        &kp COMMA    &kp DOT  &kp FSLH  &kp SEMICOLON
-                                            &kp ESC          &lt 1 ENTER     &mt LEFT_CONTROL TAB    &mt RIGHT_SHIFT BSPC  &lt 2 SPACE  &screenshot
+                 &kp Q  &kp W               &kp F            &kp P           &kp B                   &kp J                 &kp L            &kp U            &kp Y    &kp SEMI
+                 &kp A  &mt LEFT_CONTROL R  &mt RIGHT_ALT S  &mt LEFT_GUI T  &kp G                   &kp M                 &mt RIGHT_GUI N  &kp E            &kp I    &kp O
+&mt LG(V) LG(C)  &kp Z  &kp X               &kp C            &kp D           &kp V                   &kp K                 &kp H            &kp COMMA        &kp DOT  &kp FSLH  &kp APOSTROPHE
+                                            &kp ESC          &lt 1 ENTER     &mt LEFT_CONTROL TAB    &mt RIGHT_SHIFT BSPC  &lt 2 SPACE      &IOS_screenShot
             >;
         };
 
@@ -98,10 +113,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp PERCENT  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-            &kp CARET        &kp AMPS     &kp ASTRK  &kp EQUAL    &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&bt BT_CLR  &trans           &kp PG_UP    &kp CAPS   &kp PG_DN    &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                          &trans     &trans       &trans      &mo 3     &kp KP_N0  &trans
+                 &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp PERCENT  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8    &kp KP_N9  &kp KP_PLUS
+                 &kp CARET        &kp AMPS     &kp ASTRK  &kp EQUAL    &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5    &kp KP_N6  &kp KP_MINUS
+&mt LC(V) LC(C)  &bt BT_CLR       &kp PG_UP    &kp CAPS   &kp PG_DN    &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2    &kp KP_N3  &kp KP_MULTIPLY  &trans
+                                               &trans     &trans       &trans      &mo 3     &kp KP_N0  &screenshot
             >;
         };
 
