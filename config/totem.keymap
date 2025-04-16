@@ -58,7 +58,7 @@
                 <&macro_press>,
                 <&kp LEFT_SHIFT>,
                 <&macro_press>,
-                <&kp KP_NUMBER_4>,
+                <&kp NUMBER_4>,
                 <&macro_release>;
 
             label = "IOS_SCREENSHOT";
