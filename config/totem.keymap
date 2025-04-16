@@ -94,7 +94,7 @@
 
             bindings = <
                     &kp Q  &kp W               &kp F           &kp P           &kp G                   &kp J                 &kp L          &kp U        &kp Y    &kp SEMI
-                    &kp A  &mt LEFT_CONTROL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp D                   &kp H                 &kp N          &kp RCTRL    &kp I    &kp O
+                    &kp A  &mt LEFT_CONTROL R  &mt LEFT_ALT S  &mt LEFT_GUI T  &kp D                   &kp H                 &kp N          &kp E        &kp I    &kp O
 &mt K_PASTE K_COPY  &kp Z  &kp X               &kp C           &kp V           &kp B                   &kp K                 &kp M          &kp COMMA    &kp DOT  &kp FSLH  &kp BSLH
                                                &kp ESC         &lt NAV ENTER   &mt LEFT_CONTROL TAB    &mt RIGHT_SHIFT BSPC  &lt SYM SPACE  &screenshot
             >;
