@@ -84,7 +84,7 @@
             bindings = <
                  &kp Q  &kp W               &kp F            &kp P           &kp B                   &kp J                 &kp L            &kp U            &kp Y    &kp SEMI
                  &kp A  &mt LEFT_CONTROL R  &mt RIGHT_ALT S  &mt LEFT_GUI T  &kp G                   &kp M                 &mt RIGHT_GUI N  &kp E            &kp I    &kp O
-&mt LG(V) LG(C)  &kp Z  &kp X               &kp C            &kp D           &kp V                   &kp K                 &kp H            &kp COMMA        &kp DOT  &kp FSLH  &kp APOSTROPHE
+&mt LG(C) LG(V)  &kp Z  &kp X               &kp C            &kp D           &kp V                   &kp K                 &kp H            &kp COMMA        &kp DOT  &kp FSLH  &kp APOSTROPHE
                                             &kp ESC          &lt 1 ENTER     &mt LEFT_CONTROL TAB    &mt RIGHT_SHIFT BSPC  &lt 2 SPACE      &IOS_screenShot
             >;
         };
