@@ -51,9 +51,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LSHFT &kp LCMD &kp NUMBER_4>,
+                <&kp LEFT_CONTROL &kp LSHFT &kp LCMD &kp NUMBER_4>,
                 <&macro_release>,
-                <&kp LSHIFT &kp LCMD &kp NUMBER_4>,
+                <&kp LEFT_CONTROL &kp LSHIFT &kp LCMD &kp NUMBER_4>,
                 <&macro_wait_time 50>;
 
             label = "IOS_SCREENSHOT";
@@ -108,10 +108,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                 &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp PERCENT  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8    &kp KP_N9  &kp KP_PLUS
-                 &kp CARET        &kp AMPS     &kp ASTRK  &kp EQUAL    &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5    &kp KP_N6  &kp KP_MINUS
-&mt LC(V) LC(C)  &bt BT_CLR       &kp PG_UP    &kp CAPS   &kp PG_DN    &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2    &kp KP_N3  &kp KP_MULTIPLY  &trans
-                                               &trans     &trans       &trans      &mo 3     &kp KP_N0  &screenshot
+                 &kp EXCLAMATION  &kp AT_SIGN  &kp POUND  &kp PERCENT  &kp LBRC    &kp RBRC  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
+                 &kp CARET        &kp AMPS     &kp ASTRK  &kp EQUAL    &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&mt LC(V) LC(C)  &bt BT_CLR       &kp PG_UP    &kp CAPS   &kp PG_DN    &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &trans
+                                               &trans     &trans       &trans      &mo 3     &kp NUMBER_0  &screenshot
             >;
         };
 
