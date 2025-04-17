@@ -41,7 +41,7 @@
                 <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>,
                 <&macro_release>,
                 <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>,
-                <&macro_wait_time 50>;
+                <&macro_wait_time 100>;
 
             label = "SCREENSHOT";
         };
@@ -53,9 +53,8 @@
                 <&macro_press>,
                 <&kp LSHFT &kp LCMD &kp NUMBER_4>,
                 <&macro_release>,
-                <&kp LSHIFT>,
-                <&macro_wait_time 50>,
-                <&kp &kp>;
+                <&kp LSHIFT &kp LCMD &kp NUMBER_4>,
+                <&macro_wait_time 50>;
 
             label = "IOS_SCREENSHOT";
         };
