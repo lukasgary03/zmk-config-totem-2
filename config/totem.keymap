@@ -55,8 +55,10 @@
             bindings =
                 <&macro_press>,
                 <&kp LSHFT>,
+                <&macro_release>,
                 <&macro_press>,
                 <&kp LCMD>,
+                <&macro_release>,
                 <&macro_press>,
                 <&kp NUMBER_4>,
                 <&macro_release>;
