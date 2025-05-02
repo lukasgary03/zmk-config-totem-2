@@ -63,7 +63,7 @@
         nav_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "NAV";
+            label = "NAVI";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -71,19 +71,30 @@
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
             //             ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃    LMB    ┃   ┃           ┃    LEFT   ┃   DOWN    ┃    UP     ┃   RIGHT   ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃   UNDO    ┃   CUT     ┃    COPY   ┃   PASTE   ┃    UNDO   ┃   ┃           ┃   W LEFT  ┃   W DOWN  ┃   W UP    ┃  W RIGHT  ┃           ┃
+            // ┃           ┃   UNDO    ┃   CUT     ┃    COPY   ┃   PASTE   ┃    REDO   ┃   ┃           ┃   W LEFT  ┃   W DOWN  ┃   W UP    ┃  W RIGHT  ┃           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃   REPEAT  ┃    SW3    ┃   SHFT    ┃   ┃   BACK    ┃   SW1     ┃   CTRL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
+
+
             bindings = <
-                &kp ESC     &bt BT_CLR  &kp UP      &kp EQUAL   &kp LBRC        &kp RBRC    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
-                 //&trans &trans              &mmv MOVE_UP     &trans          &mkp RCLK               &trans                &kp HOME         &trans           &trans   &kp END
-                 &none  &mmv MOVE_LEFT      &mmv MOVE_DOWN   &mmv MOVE_RIGHT &mkp LCLK               &none                 &kp LEFT         &kp DOWN         &kp UP   &kp RIGHT
-         &mo NUM &kp Q  &kp X               &kp M            &kp C           &kp V                   &none                 &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
-                                            &key_repeat      &tog 2          &kp LSHIFT              &kp BSPC              &tog 1           &kp LCTRL
-            >;
-        };
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &none       &none      &mmv MOVE_UP &none       &mkp RCLK       &none       &kp HOME    &none       &none       &kp END
+                &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp LCLK &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+    &none      &kp LC(Z)    &kp LC(X)  &kp LC(C)    &kp LC(V)   &kp LC(Y)       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
+                                       &key_repeat  &tog 2      &kp LSHIFT      &kp BSPC    &tog 1      &kp LCTRL
+                        >;
+                };
+
+            //bindings = <
+                //&trans &trans              &mmv MOVE_UP     &trans          &mkp RCLK               &trans                &kp HOME         &trans           &trans   &kp END
+                //&none  &mmv MOVE_LEFT      &mmv MOVE_DOWN   &mmv MOVE_RIGHT &mkp LCLK               &none                 &kp LEFT         &kp DOWN         &kp UP   &kp RIGHT
+                //&mo NUM &kp Q  &kp X               &kp M            &kp C           &kp V                   &none                 &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
+                //&key_repeat      &tog 2          &kp LSHIFT              &kp BSPC              &tog 1           &kp LCTRL
+            //>;
+        //};
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
