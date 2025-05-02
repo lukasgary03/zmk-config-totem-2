@@ -80,10 +80,6 @@
             bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-
-            bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-
                 &none       &none      &mmv MOVE_UP &none       &mkp RCLK       &none       &kp HOME    &none       &none       &kp END
                 &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp LCLK &none       &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
     &none      &kp LC(Z)    &kp LC(X)  &kp LC(C)    &kp LC(V)   &kp LC(Y)       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
