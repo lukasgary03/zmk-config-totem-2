@@ -129,7 +129,7 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none       &none       &none       &C_MUTE         &KP_MULTIPLY &kp N7     &kp N8      &kp N9      &KP_PLUS       
+                &trans      &trans      &trans      &trans      &C_MUTE         &KP_MULTIPLY &kp N7     &kp N8      &kp N9      &KP_PLUS       
                 &kp RA(A)   &trans      &kp RA(S)   &trans      &trans          &kp C_MUTE  &kp LS(RA(N4)) &kp RA(N5) &kp RA(N4)   &kp RA(O) 
     &trans      &kp RA(F18) &kp RA(F19) &trans      &trans      &trans          &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT  &kp BSLH   &trans         
                                         &trans      &gif        &mo ADJ         &trans      &kp C_PP    &trans      
