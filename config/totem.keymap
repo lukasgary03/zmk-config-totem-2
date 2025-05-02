@@ -79,7 +79,7 @@
             bindings = <
                  &none  &none               &mmv MOVE_UP     &none           &mkp RCLK               &none                 &kp HOME         &none            &none    &kp END
                  &none  &mmv MOVE_LEFT      &mmv MOVE_DOWN   &mmv MOVE_RIGHT &mkp LCLK               &none                 &kp LEFT         &kp DOWN         &kp UP   &kp RIGHT
-         &mo NUM &kp Q  &kp X               &kp M            &kp C           &kp V                   &none                 &kp SCRL_LEFT    &kp SCRL_DOWN &kp SCRL_UP &kp SCRL_RIGHT &none
+         &mo NUM &kp Q  &kp X               &kp M            &kp C           &kp V                   &none                 &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
                                             &key_repeat      &tog 2          &kp LSHIFT              &kp BSPC              &tog 1           &kp LCTRL
             >;
         };
