@@ -133,7 +133,7 @@
         combo_bothpar {
             timeout-ms = <30>;
             key-positions = <6 8>;
-            bindings = <&kp bothPar>;
+            bindings = <&bothPar>;
         };
     };
 };
