@@ -204,7 +204,7 @@
         combo_backslash {
             timeout-ms = <30>;
             key-positions = <18 19>;
-            bindings = <&kp BSLSH>;
+            bindings = <&kp BACKSLASH>;
         };
         combo_undo {
             timeout-ms = <30>;
