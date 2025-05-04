@@ -30,6 +30,27 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <0 10>;
+            bindings = <&kp TAB>;
+        };
+        combo_at {
+            timeout-ms = <50>;
+            key-positions = <1 11>;
+            bindings = <&kp AT>;
+        };
+        combo_perc {
+            timeout-ms = <50>;
+            key-positions = <2 12>;
+            bindings = <&kp PERCENT>;
+        };
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
@@ -75,9 +96,9 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none       &none      &mmv MOVE_UP &none       &mkp RCLK       &none       &kp HOME    &none       &none       &kp END
-                &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp LCLK  &none      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
-    &none      &kp LC(Z)    &kp LC(X)  &kp LC(C)    &kp LC(V)   &kp LC(Y)       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none
+                &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &none       &none       &kp END
+                &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &none      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+    &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
                                        &key_repeat  &to 2      &sk LSHIFT      &kp BSPC    &to 0      &sk LCTRL
                         >;
                 };
