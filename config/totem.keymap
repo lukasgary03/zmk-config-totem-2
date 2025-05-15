@@ -333,7 +333,7 @@ label= "BASE"                              ;
                  &kp B  &kp L               &kp D            &kp W           &kp Z                   &kp COMMA             &kp F            &kp O            &kp U    &kp J
                  &kp N  &kp R               &kp T            &kp S           &kp G                   &kp Y                 &kp H            &kp A            &kp E    &kp I
          &mo 2   &kp Q  &kp X               &kp M            &kp C           &kp V                   &kp K                 &kp P            &kp APOSTROPHE   &kp DOT  &kp FSLH  &kp LALT
-                              &mt LC(LS(LALT)) key_repeat    &to 1           &sk LSHIFT              &kp BSPC              &kp SPACE        &sk LCTRL
+                              &mt LC(LS(LALT)) SPACE    &to 1           &sk LSHIFT              &kp BSPC              &kp SPACE        &sk LCTRL
             >;
         };
 
