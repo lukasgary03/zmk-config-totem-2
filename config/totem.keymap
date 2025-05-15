@@ -33,6 +33,11 @@
     quick-release;
 };
 
+&msc {
+    time-to-max-speed-ms = <100>;
+    acceleration-exponent = <0>;
+};
+
 / {
     macros {
         repeatKey: repeatKey {
@@ -347,7 +352,7 @@ label= "NAV"                               ;
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃ C + S Tab ┃  C Tab    ┃     UP    ┃           ┃    RMB    ┃   ┃           ┃    HOME   ┃  C PgDn   ┃  C PgUp   ┃    END    ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃    LMB    ┃   ┃           ┃    LEFT   ┃   DOWN    ┃    UP     ┃   RIGHT   ┃
+            //             ┃           ┃   LEFT    ┃    DOWN   ┃   RIGHT   ┃    LMB    ┃   ┃    DEL    ┃    LEFT   ┃   DOWN    ┃    UP     ┃   RIGHT   ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
             // ┃           ┃   UNDO    ┃   CUT     ┃    COPY   ┃   PASTE   ┃    REDO   ┃   ┃           ┃   W LEFT  ┃   W DOWN  ┃   W UP    ┃  W RIGHT  ┃           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -357,7 +362,7 @@ label= "NAV"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &kp PG_DN       &kp PG_UP       &kp END
-                &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &none      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+                &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &kp DEL      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
     &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
                               &kp LC(LS(LALT))               &to 2           &sk LSHIFT              &mt LC(BSPC) BSPC              &to 0        &sk LCTRL
                         >;
