@@ -23,14 +23,24 @@
 #define NUM  2
 
 &mt {
-  quick-tap-ms = <150>;
   retro-tap;
-  flavor = "balanced";
-  tapping-term-ms = <350>;
+  tapping-term-ms = <250>;
+};
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
 };
 
 / {
     macros {
+        repeatKey: repeatKey {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&key_repeat>
+                ;
+        };
         bothBrc: bothBrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -322,7 +332,7 @@ label= "BASE"                              ;
                  &kp B  &kp L               &kp D            &kp W           &kp Z                   &kp COMMA             &kp F            &kp O            &kp U    &kp J
                  &kp N  &kp R               &kp T            &kp S           &kp G                   &kp Y                 &kp H            &kp A            &kp E    &kp I
          &mo 2   &kp Q  &kp X               &kp M            &kp C           &kp V                   &kp K                 &kp P            &kp APOSTROPHE   &kp DOT  &kp FSLH  &kp LALT
-                                            &key_repeat      &to 1          &sk LSHIFT              &kp BSPC              &kp SPACE        &sk LCTRL
+                              &mt LS(LC(LALT)) repeatKey     &to 1           &sk LSHIFT              &kp BSPC              &kp SPACE        &sk LCTRL
             >;
         };
 
@@ -361,9 +371,9 @@ label= "NUM"                               ;
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃           ┃           ┃   EMAIL2  ┃   EMAIL1  ┃   MUTE    ┃   ┃     *     ┃     7     ┃     8     ┃     9     ┃     +     ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     VOL-  ┃   PREV    ┃    PLAY   ┃   NEXT    ┃    VOL+   ┃   ┃     /     ┃     4     ┃     5     ┃     6     ┃     -     ┃
+            //             ┃     VOL-  ┃   PREV    ┃    PLAY   ┃   NEXT    ┃    VOL+   ┃   ┃     /     ┃     4     ┃     5     ┃     6     ┃     0     ┃
             // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃     =     ┃     1     ┃     2     ┃     3     ┃     0     ┃     .     ┃
+            // ┃           ┃           ┃           ┃           ┃           ┃           ┃   ┃     =     ┃     1     ┃     2     ┃     3     ┃     -     ┃     .     ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃   REPEAT  ┃    SW3    ┃   SHFT    ┃   ┃   BACK    ┃   SW 1    ┃   CTRL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -371,8 +381,8 @@ label= "NUM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                  &none  &none               &none            &none           &kp C_MUTE                 &kp KP_MULTIPLY          &kp N7           &kp N8           &kp N9   &kp KP_PLUS
-              &kp C_VOL_DN &kp C_PREV             &kp C_PLAY_PAUSE    &kp C_NEXT         &kp C_VOL_UP               &kp KP_DIVIDE            &kp N4           &kp N5           &kp N6   &kp KP_MINUS
-        &none &none  &none                  &none            &none           &none                   &kp KP_EQUAL             &kp N1           &kp N2           &kp N3   &kp N0   &kp KP_DOT
+              &kp C_VOL_DN &kp C_PREV             &kp C_PLAY_PAUSE    &kp C_NEXT         &kp C_VOL_UP               &kp KP_DIVIDE            &kp N4           &kp N5           &kp N6   &kp N0
+        &none &none  &none                  &none            &none           &none                   &kp KP_EQUAL             &kp N1           &kp N2           &kp N3   &kp KP_MINUS   &kp KP_DOT
                                             &key_repeat      &to 1          &sk LSHIFT              &kp BSPC              &to 0           &sk LCTRL
                         >;
                 };
