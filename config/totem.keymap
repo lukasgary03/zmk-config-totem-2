@@ -356,7 +356,7 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &PG_DN       &PG_UP       &kp END
+                &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &kp PG_DN       &kp PG_UP       &kp END
                 &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &none      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
     &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
                               &kp LC(LS(LALT))               &to 2           &sk LSHIFT              &mt LC(BSPC) BSPC              &to 0        &sk LCTRL
