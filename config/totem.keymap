@@ -45,8 +45,8 @@ behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp BSPC>, <&kp LC(BSPC)>;
+            tapping-term-ms = <300>;
+            bindings = <&kp BSPC>, <&ctrlBack>;
         };
     };
     macros {
@@ -55,6 +55,14 @@ behaviors {
             #binding-cells = <0>;
             bindings
                 = <&key_repeat>
+                ;
+        };
+ctrlBack: ctrlBack {
+compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LCTRL>
+                , <&kp BSPC>
                 ;
         };
         bothBrc: bothBrc {
