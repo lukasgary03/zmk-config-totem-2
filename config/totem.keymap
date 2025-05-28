@@ -45,7 +45,7 @@ behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <80>;
+            tapping-term-ms = <200>;
             bindings = <&kp BSPC>, <&kp LC(BSPC)>;
         };
     };
