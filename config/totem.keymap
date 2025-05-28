@@ -37,6 +37,10 @@
     time-to-max-speed-ms = <100>;
     acceleration-exponent = <0>;
 };
+
+
+
+/ {
 behaviors {
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -45,9 +49,6 @@ behaviors {
             bindings = <&kp BSPC>, <&kp LC(BSPC)>;
         };
     };
-
-
-/ {
     macros {
         repeatKey: repeatKey {
             compatible = "zmk,behavior-macro";
