@@ -41,6 +41,14 @@
 
 
 / {
+    macros {
+        repeatKey: repeatKey {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&key_repeat>
+                ;
+        };
         bothBrc: bothBrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
