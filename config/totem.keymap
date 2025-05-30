@@ -50,16 +50,18 @@
             display-name = "Backspace-Full";
         };
     };
+rpt: repeat-key {
+   compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&key_repeat>;
+            display-name = "Backspace-Full";
+        };
+    };
 };
 / {
     macros {
-        repeatKey: repeatKey {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&key_repeat>
-                ;
-        };
 ctrlBack: ctrlBack {
 compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -360,7 +362,7 @@ label= "BASE"                              ;
                  &kp B  &kp L               &kp D            &kp W           &kp Z                   &kp COMMA             &kp F            &kp O            &kp U    &kp J
                  &kp N  &kp R               &kp T            &kp S           &kp G                   &kp Y                 &kp H            &kp A            &kp E    &kp I
          &mo 2   &kp Q  &kp X               &kp M            &kp C           &kp V                   &kp K                 &kp P            &kp APOSTROPHE   &kp DOT  &kp FSLH  &kp LALT
-                              &kp LC(LS(LALT))               &to 1           &kp LSHIFT              &bf 0 BACKSPACE       &kp SPACE        &kp LCTRL
+                              &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE       &kp SPACE        &kp LCTRL
             >;
         };
 
@@ -386,7 +388,7 @@ label= "NAV"                               ;
                 &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &kp PG_DN       &kp PG_UP       &kp END
                 &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &kp DEL      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
     &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
-                              &kp LC(LS(LALT))               &to 2           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
+                              &rpt LC(LS(LALT)) 0               &to 2           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
                         >;
                 };
 
@@ -411,7 +413,7 @@ label= "NUM"                               ;
                  &none  &none               &none            &none           &kp C_MUTE                 &kp KP_MULTIPLY          &kp N7           &kp N8           &kp N9   &kp KP_PLUS
                      &none  &none                  &none            &none           &none         &kp KP_DIVIDE            &kp N4           &kp N5           &kp N6   &kp N0
                &none &kp C_VOL_DN &kp C_PREV             &kp C_PLAY_PAUSE    &kp C_NEXT         &kp C_VOL_UP    &kp KP_EQUAL             &kp N1           &kp N2           &kp N3   &kp KP_MINUS   &kp KP_DOT
-                              &kp LC(LS(LALT))               &to 1           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
+                              &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
                         >;
                 };
         };
