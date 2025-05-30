@@ -49,7 +49,6 @@
             bindings = <&ctrlBack>, <&kp>;
             display-name = "Backspace-Full";
         };
-    };
 rpt: repeat-key {
    compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
