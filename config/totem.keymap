@@ -9,7 +9,7 @@
 //                                                                      ▀  ▀  ▀
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-       
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -23,9 +23,9 @@
 #define NUM  2
 
 &mt {
-  retro-tap;
-  flavor = "tap-preferred";
-  tapping-term-ms = <110>;
+    retro-tap;
+    flavor = "tap-preferred";
+    tapping-term-ms = <110>;
 };
 
 &sk {
@@ -49,8 +49,8 @@
             bindings = <&ctrlBack>, <&kp>;
             display-name = "Backspace-Full";
         };
-rpt: repeat-key {
-   compatible = "zmk,behavior-hold-tap";
+        rpt: repeat-key {
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <150>;
@@ -61,67 +61,67 @@ rpt: repeat-key {
 };
 / {
     macros {
-ctrlBack: ctrlBack {
-compatible = "zmk,behavior-macro";
+        ctrlBack: ctrlBack {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-wait-ms= <0>;
+            wait-ms= <0>;
             bindings
-                = <&kp LC(BSPC)>
-                ;
+            = <&kp LC(BSPC)>
+            ;
         };
         bothBrc: bothBrc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LBRC>
-                , <&kp RBRC>
-                , <&kp LEFT>
-                ;
+            = <&kp LBRC>
+            , <&kp RBRC>
+            , <&kp LEFT>
+            ;
         };
         bothPar: bothPar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LPAR>
-                , <&kp RPAR>
-                , <&kp LEFT>
-                ;
+            = <&kp LPAR>
+            , <&kp RPAR>
+            , <&kp LEFT>
+            ;
         };
         doubleQuote: doubleQuote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp DOUBLE_QUOTES>
-                , <&kp DOUBLE_QUOTES>
-                , <&kp LEFT>
-                ;
+            = <&kp DOUBLE_QUOTES>
+            , <&kp DOUBLE_QUOTES>
+            , <&kp LEFT>
+            ;
         };
         doubleApost: doubleApost {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp APOSTROPHE>
-                , <&kp APOSTROPHE>
-                , <&kp LEFT>
-                ;
+            = <&kp APOSTROPHE>
+            , <&kp APOSTROPHE>
+            , <&kp LEFT>
+            ;
         };
         bothBrack: bothBrack {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LBKT>
-                , <&kp RBKT>
-                , <&kp LEFT>
-                ;
+            = <&kp LBKT>
+            , <&kp RBKT>
+            , <&kp LEFT>
+            ;
         };
         bothThan: bothThan {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LT>
-                , <&kp GT>
-                , <&kp LEFT>
-                ;
+            = <&kp LT>
+            , <&kp GT>
+            , <&kp LEFT>
+            ;
         };
     };
 };
@@ -154,7 +154,7 @@ wait-ms= <0>;
             key-positions = <4 14>;
             bindings = <&kp ESC>;
         };
-       combo_esclam {
+        combo_esclam {
             timeout-ms = <50>;
             key-positions = <5 15>;
             bindings = <&kp EXCL>;
@@ -240,7 +240,7 @@ wait-ms= <0>;
             bindings = <&kp ENTER>;
         };
         combo_backslash {
-            timeout-ms = <35>;
+            timeout-ms = <50>;
             key-positions = <18 19>;
             bindings = <&kp BACKSLASH>;
         };
@@ -338,14 +338,14 @@ wait-ms= <0>;
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    keymap {
+        compatible = "zmk,keymap";
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                base_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "BASE"                              ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        base_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            label= "BASE"                              ;
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃     B     ┃     L     ┃     D     ┃     W     ┃     Z     ┃   ┃     ,     ┃     F     ┃     O     ┃     U     ┃     J     ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
@@ -357,20 +357,20 @@ label= "BASE"                              ;
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                 &kp B  &kp L               &kp D            &kp W           &kp Z                   &kp COMMA             &kp F            &kp O            &kp U    &kp J
-                 &kp N  &kp R               &kp T            &kp S           &kp G                   &kp Y                 &kp H            &kp A            &kp E    &kp I
-         &mo 2   &kp Q  &kp X               &kp M            &kp C           &kp V                   &kp K                 &kp P            &kp APOSTROPHE   &kp DOT  &kp FSLH  &kp LALT
-                              &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE       &kp SPACE        &kp LCTRL
+                &kp B  &kp L               &kp D            &kp W           &kp Z                   &kp COMMA             &kp F            &kp O            &kp U    &kp J
+                &kp N  &kp R               &kp T            &kp S           &kp G                   &kp Y                 &kp H            &kp A            &kp E    &kp I
+                &mo 2   &kp Q  &kp X               &kp M            &kp C           &kp V                   &kp K                 &kp P            &kp APOSTROPHE   &kp DOT  &kp FSLH  &kp LALT
+                &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE       &kp SPACE        &kp LCTRL
             >;
         };
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                nav_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "NAV"                               ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        nav_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            label= "NAV"                               ;
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃ C + S Tab ┃  C Tab    ┃     UP    ┃           ┃    RMB    ┃   ┃           ┃    HOME   ┃  C PgDn   ┃  C PgUp   ┃    END    ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
@@ -380,22 +380,22 @@ label= "NAV"                               ;
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃   REPEAT  ┃    SW3    ┃   SHFT    ┃   ┃   BACK    ┃   SW1     ┃   CTRL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+            bindings = <
+                // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp LC(LS(TAB)) &kp LC(TAB) &mmv MOVE_UP &none       &none       &none       &kp HOME    &kp PG_DN       &kp PG_UP       &kp END
                 &mkp LCLK   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none  &kp DEL      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
-    &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
-                              &rpt LC(LS(LALT)) 0               &to 2           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
-                        >;
-                };
+                &mo 2      &mkp RCLK    &none  &none    &none   &none       &none       &msc SCRL_LEFT   &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp LALT
+                &rpt LC(LS(LALT)) 0               &to 2           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
+            >;
+        };
 
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-                num_layer {
-// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "NUM"                               ;
-// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+        num_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+            label= "NUM"                               ;
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             //             ┃           ┃           ┃   EMAIL2  ┃   EMAIL1  ┃   MUTE    ┃   ┃     *     ┃     7     ┃     8     ┃     9     ┃     +     ┃
             //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
@@ -405,14 +405,14 @@ label= "NUM"                               ;
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                                     ┃   REPEAT  ┃    SW3    ┃   SHFT    ┃   ┃   BACK    ┃   SW 1    ┃   CTRL    ┃
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
- bindings = <
-// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+            bindings = <
+                // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                 &none  &none               &none            &none           &kp C_MUTE                 &kp KP_MULTIPLY          &kp N7           &kp N8           &kp N9   &kp KP_PLUS
-                     &none  &none                  &none            &none           &none         &kp KP_DIVIDE            &kp N4           &kp N5           &kp N6   &kp N0
-               &none &kp C_VOL_DN &kp C_PREV             &kp C_PLAY_PAUSE    &kp C_NEXT         &kp C_VOL_UP    &kp KP_EQUAL             &kp N1           &kp N2           &kp N3   &kp KP_MINUS   &kp KP_DOT
-                              &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
-                        >;
-                };
+                &none  &none               &none            &none           &kp C_MUTE                 &kp KP_MULTIPLY          &kp N7           &kp N8           &kp N9   &kp KP_PLUS
+                &none  &none                  &none            &none           &none         &kp KP_DIVIDE            &kp N4           &kp N5           &kp N6   &kp N0
+                &none &kp C_VOL_DN &kp C_PREV             &kp C_PLAY_PAUSE    &kp C_NEXT         &kp C_VOL_UP    &kp KP_EQUAL             &kp N1           &kp N2           &kp N3   &kp KP_MINUS   &kp KP_DOT
+                &rpt LC(LS(LALT)) 0               &to 1           &kp LSHIFT              &bf 0 BACKSPACE              &to 0        &kp LCTRL
+            >;
         };
+    };
 };
